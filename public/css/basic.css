@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-gray: rgb(92, 92, 92);
+  --primary-opaque-gray: rgba(92, 92, 92, 0.3);
+  --primary-dark: #181818;
+}
+
+button {
+  cursor: pointer;
+  transition: all ease 0.3s;
+  border: none;
+}

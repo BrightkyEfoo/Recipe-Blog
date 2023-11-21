@@ -1,0 +1,22 @@
+<img class="banner-image" src="/public/img/<%= category.image %>" alt="<%= category.name %>" />
+<h2>Explore Category : <%= category.name %></h2>
+<p class="breadcrumbs">
+    <a href="/">Home</a> <span>/</span> 
+    <a href="/category">Explore Categories</a> <span>/</span> 
+    <span><%= category.name %></span>
+</p>
+<div class="latest-recipes-container">
+    <% if(typeof recipes !== 'undefined' || typeof recipes !== 'null') { %>
+      <% recipes.forEach(el =>{ %>
+        <div class="recipe-card">
+            <a href="/recipe/<%= el.id %>">
+                <img
+                    src="/public/uploads/<%= el.image %>"
+                    alt="<%= el.name %>"
+                />
+                <span><%= el.name %></span>
+            </a>
+        </div>
+      <% }) %>
+    <% } %>
+</div>

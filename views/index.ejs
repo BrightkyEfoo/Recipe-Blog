@@ -1,0 +1,78 @@
+<!-- hero section start -->
+<div class="hero-section">
+  <h2>Huge selection of delicious recipe ideas</h2>
+  <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+    doloribus culpa at iusto numquam commodi totam vel iste, ullam consectetur,
+    incidunt quis quibusdam mollitia et. Fuga, provident saepe! Minima, est.
+  </p>
+  <a href="#"><button class="dark-btn">Explore Latest</button></a>
+  <a href="#"><button class="white-btn">Show Random</button></a>
+  <img src="public/img/hero-image.png" />
+</div>
+<!-- hero section end -->
+
+<!-- Categorie  -->
+<div class="categories-food">
+  <% if(typeof categories !== 'undefined' || typeof categories !== 'null') { %>
+    <% categories.forEach((element ,index) => { %>
+      <a href="/category/<%= element.name %>"> 
+        <div class="blok-categorie">
+          <div class="contaib-img">
+            <img
+              class="categorie-image"
+              src="/public/img/<%= element.image %>"
+              alt="<%= element.image %>"
+            />
+          </div>
+          <div class="categorie-title"><%= element.name %></div>
+        </div>
+      </a>
+    <% }) %> 
+  <% } %>
+  <a href="/category"> 
+    <div class="blok-categorie">
+      <div class="contaib-img">
+        <img
+          class="categorie-image"
+          src="/public/img/view-all.jpg"
+          alt="food picture"
+        />
+      </div>
+      <div class="categorie-title">View All</div>
+    </div>
+  </a>
+</div>
+
+<!-- category end -->
+
+<!-- Last recipes start -->
+<div class="latest-recipes-container">
+  <h2>Last Recipes</h2>
+  <a href="#">View More</a>
+  <% if(typeof recipes !== 'undefined' || typeof recipes !== 'null') { %>
+    <% recipes.forEach(el =>{ %>
+      <div class="recipe-card">
+        <a href="/recipe/<%= el.id %>">
+          <img
+            src="public/uploads/<%= el.image %>"
+            alt="<%= el.name %>"
+          />
+          <span><%= el.name %></span>
+        </a>
+      </div>
+    <% }) %>
+  <% } %>
+</div>
+<!-- Last recipes end -->
+
+<!-- Submit form start -->
+
+<div class="submit-form">
+  <img src="public/img/publish-recipe.png" alt="publish recipe" />
+  <h2>Publish your recipe for FREE today</h2>
+  <p>Publish your recipe in front of thousands of people for free.</p>
+  <a href="#"><button class="dark-btn">Submit Recipe</button></a>
+</div>
+
+<!-- Submit form end -->

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= typeof title === 'undefined' ? "Cooking Blog" : title %></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/public/css/basic.css" />
+    <link rel="stylesheet" href="/public/css/global.css" />
+    <link rel="stylesheet" href="/public/css/<%= typeof stylesheet ===
+    'undefined' ? "home" : stylesheet %>.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./public/fa/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="navbar">
+        <a href="/">
+          <img
+            src="/public/img/logo.svg"
+            class="logo"
+            alt="Cooking - Blog"
+            height="50"
+          />
+        </a>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/submit">Submit</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+        <form method="POST" action="/search">
+          <input type="search" name="searchTerm" placeholder="Search..." />
+        </form>
+      </header>
+      <%- body -%>
+      <footer class="footer">
+        <p>Build with NODE.JS</p>
+      </footer>
+    </div>
+    <script src="/public/js/script.js"></script>
+  </body>
+</html>

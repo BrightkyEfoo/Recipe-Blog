@@ -1,0 +1,20 @@
+<h2>Explore Categories</h2>
+<p class="breadcrumbs"><a href="/">Home</a> <span>/</span> <span>Explore Categories</span></p>
+<div class="categories-food">
+  <% if(typeof categories !== 'undefined' || typeof categories !== 'null') { %>
+    <% categories.forEach((element ,index) => { %>
+        <a href="/category/<%= element.name %>">
+            <div class="blok-categorie">
+            <div class="contaib-img">
+                <img
+                class="categorie-image"
+                src="/public/img/<%= element.image %>"
+                alt="<%= element.image %>"
+                />
+            </div>
+            <div class="categorie-title"><%= element.name %></div>
+            </div>
+        </a>
+    <% }) %> 
+  <% } %>
+</div>

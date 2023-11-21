@@ -1,0 +1,48 @@
+<h1>Submit Your Recipe</h1>
+<p>
+  Share your amazing recipes swith thousands of web developpers accross the
+  world. Fill our form to get started
+</p>
+
+<form
+  action="/recipe/submit"
+  class="submit-form"
+  enctype="multipart/form-data"
+  method="POST"
+>
+  <div>
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" />
+  </div>
+  <div>
+    <label for="name">Recipe Name</label>
+    <input type="text" name="name" id="name" />
+  </div>
+  <div>
+    <label for="description">Description</label>
+    <textarea rows="3" name="description" id="description"> </textarea>
+  </div>
+  <div>
+    <label for="ingredients">Ingredients</label>
+    <div class="ingredient-list"><input type="text" name="ingredients" class="ingredients" /></div>
+    <div>
+      <button type="button" id="add">Add Ingredient</button>
+      <button type="button" id="remove">Remove Ingredient</button>
+    </div>
+  </div>
+  <div>
+    <label for="category">Category</label>
+    <select required name="category">
+      <option>Select Category</option>
+      <% ['Thai', 'American', 'Chinese', 'Mexican', 'Indian',
+      'Chinese'].forEach(el => { %>
+      <option value="<%= el %>"><%= el %></option>
+      <% }) %>
+    </select>
+  </div>
+  <div>
+    <label for="image">Image</label>
+    <input type="file" accept="image/*" name="image" id="image" />
+  </div>
+  <button type="submit">Submit</button>
+</form>

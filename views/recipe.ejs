@@ -1,0 +1,20 @@
+<p class="breadcrumbs">
+  <a href="/">Home</a> <span>/</span> <span><%= recipe.name %></span>
+</p>
+<div class="recipe-container">
+  <img src="/public/uploads/<%= recipe.image %>" height="530" width="402" alt="<%= recipe.name %>" />
+  <div class="right">
+    <h2><%= recipe.name %></h2>
+    <!-- <i class="" -->
+    <span class="category"><%= recipe.category %></span>
+
+    <h3>Cooking Instructions</h3>
+    <p><%= recipe.description %></p>
+    <h3>Ingredients</h3>
+    <% recipe.ingredients.forEach(ingredient => { %>
+        <p class="ingredient">
+            <%= ingredient %>
+        </p>
+    <% }) %>
+  </div>
+</div>

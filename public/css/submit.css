@@ -1,0 +1,74 @@
+h1 {
+  font-size: 40px;
+  text-align: center;
+  margin: 70px 0 20px;
+}
+
+h1 + p {
+  color: var(--primary-gray);
+  font-size: 18px;
+  text-align: center;
+}
+form.submit-form {
+  max-width: 1000px;
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 25px;
+}
+
+form > div {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  margin: 7px 0;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+form > div > label {
+  font-weight: bold;
+  color: var(--primary-gray);
+}
+
+.ingredients{
+  margin: 8px 0;
+}
+form > div input, .ingredients {
+  height: 35px;
+  border-radius: 4px;
+  width: 100%;
+  outline: none;
+  border: 1px solid rgb(92, 92, 209);
+}
+
+.ingredient-list{
+  width: 100%;
+}
+form > div > select {
+  padding: 8px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid rgb(92, 92, 209);
+}
+
+form > div > textarea {
+  padding: 8px;
+  resize: none;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid rgb(92, 92, 209);
+}
+
+form > div button {
+  padding: 6px 14px;
+  margin: 8px 10px 15px;
+}
+
+button[type="submit"] {
+  background-color: rgb(30, 30, 255);
+  padding: 8px 24px;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+}

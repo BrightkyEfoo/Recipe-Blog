@@ -1,0 +1,55 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  color: var(--primary-gray);
+  margin: 18px 0 14px;
+}
+
+.breadcrumbs > a {
+  color: var(--primary-dark);
+}
+
+.recipe-container {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 25px;
+}
+
+.recipe-container img{
+  object-fit: cover;
+}
+
+.right {
+  flex-grow: 1;
+}
+
+.right > h2 {
+  font-size: 40px;
+}
+
+.right > span.category {
+  color: var(--primary-gray);
+  font-weight: bold;
+  font-size: 13px;
+}
+
+h3 {
+  font-size: 28px;
+  margin: 25px 0 18px;
+}
+
+.right > h3:first-of-type {
+  margin: 35px 0 25px;
+}
+
+.ingredient {
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--primary-gray);
+  margin: 4px 0;
+}
+
+.ingredient:last-of-type {
+  border: none;
+}

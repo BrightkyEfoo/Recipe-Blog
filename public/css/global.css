@@ -1,0 +1,110 @@
+/* navbar start */
+.navbar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  border-bottom: 1px solid var(--primary-opaque-gray);
+  padding: 16px 0;
+}
+
+.navbar > ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  height: 100%;
+  align-items: center;
+}
+
+.navbar > ul a {
+  text-decoration: none;
+  color: var(--primary-gray);
+  font-weight: 600;
+  font-size: 18px;
+  transition: all ease 0.3s;
+  padding: 5px;
+}
+
+.navbar > ul a:hover {
+  border-bottom: 2px solid var(--primary-gray);
+}
+
+.navbar > form {
+  width: 90%;
+  height: fit-content;
+  justify-self: flex-end;
+}
+
+.navbar > form input {
+  height: 35px;
+  border-radius: 4px;
+  border: 2px solid var(--primary-opaque-gray);
+  width: 100%;
+  padding-left: 6px;
+  outline: none;
+}
+
+.navbar > form input::placeholder {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--primary-gray);
+}
+
+.logo {
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+/* navbar end */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px 30px;
+  box-shadow: 0 0 14px 3px rgba(0, 0, 0, 0.3);
+  background-color: white;
+}
+
+body {
+  background-image: url("/public/img/i-like-food.svg");
+}
+
+/* footer start */
+.footer {
+  display: grid;
+  place-items: center;
+  padding: 20px 0;
+  font-weight: bold;
+  font-size: 16px;
+  border-top: 1px solid var(--primary-opaque-gray);
+  color: var(--primary-gray);
+}
+
+/* footer end */
+
+/* buttons start */
+.dark-btn {
+  background-color: var(--primary-dark);
+  padding: 8px 14px;
+  border: 2px solid var(--primary-dark);
+  border-radius: 4px;
+  margin-right: 10px;
+  color: white;
+}
+
+.white-btn {
+  background-color: white;
+  padding: 8px 14px;
+  border-radius: 4px;
+  margin-right: 10px;
+  color: var(--primary-gray);
+  border: 2px solid var(--primary-opaque-gray);
+}
+/* buttons end */
+
+.latest-recipes-container a {
+  text-decoration: none;
+  color: var(--primary-dark);
+}
